@@ -1,0 +1,17 @@
+.dashboard-container {
+    min-height: 100vh;
+    padding-inline: 1vw;
+    margin-top: 2.3em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.3rem;
+    align-items: center;
+
+    & > *:not(:last-child) {
+        border-right: 1px solid rgba(209, 209, 209, 0.5);
+    }
+
+    & > * {
+        height: 100%;
+    }
+}

@@ -1,0 +1,29 @@
+img {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    translate: -50% -70%;
+    margin: auto;
+    width: 200px;
+   
+}
+@keyframes drawOn {
+    from {
+      stroke-dashoffset: 400;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .a {
+    fill: none;
+    stroke: #000000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1;
+    stroke-dasharray: 400; /* Rough estimation of the total length of the path */
+    stroke-dashoffset: 400; /* Match the dash array at the start */
+    animation: drawOn 5s forwards; /* Animation duration set to 5 seconds */
+  }
+  

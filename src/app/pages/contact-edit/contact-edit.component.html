@@ -1,0 +1,27 @@
+<section class="contact-edit">
+    <form [formGroup]="contactForm" (ngSubmit)="onSaveContact()" class="contact-edit">
+
+        <div class="header">
+            <h2>{{ title }}</h2>
+            <h4>
+                <input formControlName="name" placeholder="Name" required="" />
+            </h4>
+            <app-contact-image [name]="contactForm.get('name')?.value"></app-contact-image>
+        </div>
+
+        <div class="info">
+            <input formControlName="email" placeholder="Email" required="" />
+            <input formControlName="phone" placeholder="Phone" />
+        </div>
+
+        <div class="action">
+            <button type="submit" [disabled]="!contactForm.valid || contactForm.value.name.length < 3">Save</button>
+            <button type="button" (click)="navigateBack()">Back</button>
+        </div>
+        <!-- Error Message -->
+        <div *ngIf="!contactForm.valid || contactForm.value.name.length < 3">
+            <small class="error-message">Please fill out the form correctly before saving.</small>
+        </div>
+    </form>
+</section>
+<!-- //TODO : Add error check to form name and email -->

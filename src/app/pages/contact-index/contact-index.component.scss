@@ -1,0 +1,23 @@
+.contact-index {
+    display: grid;
+    grid-template-columns: 4fr minmax(300px,1fr);    
+
+    .empty-section {
+        position: sticky;
+        top: 1em;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3em;
+
+        p {
+            font-size: 1.2em;
+        }
+
+        img {
+            margin-top: 1em;
+            width: 50px;
+        }
+    }
+}

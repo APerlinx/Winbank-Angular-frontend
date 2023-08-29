@@ -1,0 +1,14 @@
+<section class="contact-preview" [routerLink]="contact._id"><!--// TODO: Fix css so i can remove the router link from the section-->
+    <section class="info">
+        <app-contact-image [name]="contact.name"></app-contact-image>
+        <a [routerLink]="contact._id" class="data">
+            <p>{{contact.name}}</p>
+        </a>
+        <span class="phone-num">{{contact.phone}}</span>
+        <section class="actions">
+            <button (click)="remove.emit(contact._id)" class="remove-btn"><img src="../../assets/icon/delete.svg" alt="Delete" title="Delete" /></button>
+        </section>
+    </section>
+</section>
+
+  

@@ -1,0 +1,32 @@
+.app-header {
+
+    header {
+        height: 80px;
+        display: flex;
+        color: whitesmoke;
+        margin-bottom: 30px;
+        font-size: 1.2em;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .logo-section {
+        display: flex;
+        align-items: center;
+        padding-block-start: 1em;
+
+        h1 {
+            font-weight: 700;
+            margin-inline-start: -0.1em;
+        }
+    
+        img {
+            width: 45px;
+        }
+    }
+
+
+
+}

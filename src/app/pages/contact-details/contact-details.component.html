@@ -1,0 +1,57 @@
+<section *ngIf="contact$ | async as contact" class="contact-details">
+    <div class="header">
+        <h4>{{contact.name}}</h4>
+        <app-contact-image [name]="contact.name"></app-contact-image>
+    </div>
+
+    <div class="info">
+        <p>{{contact.email}}</p>
+        <p>{{contact.phone}}</p>
+    </div>
+
+    <div>
+        <h4 class="title">Transfer funds</h4>
+        <form [formGroup]="transactionForm" (ngSubmit)="onSend()">
+            <input type="text" placeholder="Max: {{loggedInUser?.balance | currency}}" formControlName="amount">
+            <div *ngIf="transactionForm.get('amount')?.invalid && transactionForm.get('amount')?.touched">
+                <small *ngIf="transactionForm.get('amount')?.errors?.['required']">Amount is required.</small>
+                <small *ngIf="transactionForm.get('amount')?.errors?.['insufficientBalance']">You do not have enough
+                    balance.</small>
+                <small *ngIf="transactionForm.get('amount')?.errors?.['min']">Amount cannot be negative.</small>
+                <small *ngIf="transactionForm.get('amount')?.errors?.['notANumber']">Please enter a valid
+                    number.</small>
+                <small *ngIf="transactionForm.get('amount')?.errors?.['specialChars']">Please do not use special
+                    characters.</small>
+            </div>
+            <button [disabled]="!transactionForm.valid">send</button>
+        </form>
+
+    </div>
+
+    <section class="transaction">
+        <h4 class="title">Recent transaction</h4>
+        <div class="empty-box" *ngIf="!hasTransactionsWithContact()">
+            <img src="../../assets/icon/box.svg" />
+            <small>You have no transaction yet!</small>
+        </div>
+
+        <div *ngFor="let move of loggedInUser?.moves" class="transaction-item">
+            <ng-container *ngIf="move.toId === contact._id">
+                <div class="transaction-info">
+                    <img src="../../assets/icon/send.svg" />
+                    <div class="wrapper"> <span class="contact-name">{{move?.to}}</span>
+                        <small>{{move?.at | date}}</small>
+                    </div>
+                </div>
+                <span class="amount">- {{move?.amount | currency}}</span>
+            </ng-container>
+        </div>
+    </section>
+
+    <div class="action">
+        <button [routerLink]="['/contact', contact._id, 'edit']">Edit</button>
+        <button type="button">Delete</button>
+        <button type="button" (click)="navigateBack()">Back</button>
+    </div>
+
+</section>

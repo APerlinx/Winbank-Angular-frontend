@@ -1,0 +1,73 @@
+.contact-preview {
+    height: 90px;
+    width: 95%;
+    border-radius: 3px;
+    display: flex;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(209, 209, 209, 0.5);
+    }
+
+    .info {
+        padding: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid rgba(209, 209, 209, 0.5);
+        width: 100%;
+
+        .data {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 1em;
+            > p {
+                margin: 0;
+                margin-inline-start: 0.5em;
+                font-weight: 500;
+
+            }
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            align-items: center;
+            transform: translateX(-10%);
+            transition-duration: 0.3s;
+            transition-property: transform, opacity;
+
+            .remove-btn {
+                
+                background-color: inherit;
+                border: none;
+                transition: 0.15s;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+
+    &:hover .info .actions {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    // img {
+    //     margin: 10px;
+    //     width: 50px;
+    //     height: 50px;
+    // }
+
+    .phone-num {
+        color: gray;
+        font-size: 0.9em;
+    }
+}

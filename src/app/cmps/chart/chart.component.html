@@ -1,0 +1,44 @@
+<section class="app-chart">
+
+    <section class="spending-char">
+        <div>
+            <h1>My spendings</h1>
+            <h2>$7,450.00</h2>
+            <p>USD/EUR 0,91437 / 1,09364</p>
+        </div>
+            <google-chart 
+                [type]="columnChartType"
+                [data]="spendingChartData"
+                style="width: 100%; height: 200px;"
+                [dynamicResize]="false"
+                [columns]="['Month', 'Spending']">
+            </google-chart>
+        
+    </section>
+
+    <section class="sp500-chart">
+        <google-chart 
+            [type]="candlestickChartType"
+            [data]="sp500ChartData"
+            [title]="titleStock"
+            style="width: 100%; height: 200px;"
+            [dynamicResize]="false"
+            [columns]="['Stock', 'Low', 'Open', 'Close', 'High']">
+        </google-chart>
+    </section>
+    
+
+    <section class="bitcoin-chart">
+        <google-chart 
+        [type]="lineChartType"
+        [data]="bitcoinChartData"
+        [columns]="columnNames"
+        [title]="title"
+        style="width: 100%;"
+        [dynamicResize]="false">
+      </google-chart>
+      
+    </section>
+</section>
+
+<!-- <input type="text" placeholder="search"> -->

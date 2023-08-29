@@ -1,0 +1,41 @@
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 98vh;
+    border-right: 1px solid rgba(209, 209, 209, 0.5);
+    div {
+        h1 {
+            font-weight: 500;
+        }
+        p {
+            color: gray;
+            letter-spacing: 0.09em;
+
+        }
+    }
+    nav {
+        text-align: start;
+        margin-top: 4em;
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 2em;
+        a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-block-end: 2em;
+            font-weight: 500;
+
+            &.active {
+                color: #7600FF;
+                text-decoration: underline;
+            }
+
+            img {
+                margin-right: 0.5em;
+            }
+        }
+    }
+}

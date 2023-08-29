@@ -1,0 +1,42 @@
+.app-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    header {
+        height: 80px;
+        display: flex;
+        color: whitesmoke;
+        margin-bottom: 30px;
+        font-size: 1.2em;
+        color: black;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            margin-top: 1.5em;
+            padding: 0.5em;
+            width: 180%;
+            margin-inline-start: 3em;
+            border-radius: 4px;
+            &::placeholder {
+                font-size: 1.2em;
+            }
+        }
+
+    }
+    
+    .bitcoin-chart,.sp500-chart,.spending-char {
+        width: 100%;
+        border-bottom: 1px solid rgba(209, 209, 209, 0.5);
+    }
+
+    .spending-char {
+        div {
+            p {
+                font-size: 0.8em;
+                color: gray;
+            }
+        }
+    }
+}

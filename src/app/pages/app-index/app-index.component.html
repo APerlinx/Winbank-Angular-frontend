@@ -1,0 +1,35 @@
+<section class="app-index">
+    <h1>Credit Card</h1>
+    <div class="credit-card">
+        <div class="user-info">
+            <span class="user-name">Mr. {{loggedInUser?.name}}</span>
+            <img src="../../assets/icon/visa.svg" class="visa-icon" />
+        </div>
+        <span class="card-num">4580 **** **** 6521</span>
+        <img src="../../assets/icon/logo-white.svg" class="bank-logo" />
+    </div>
+    <div class="divider"></div>
+
+    <section class="balance">
+        <h4 class="title">Balance</h4>
+        <span>{{loggedInUser?.balance | currency}}</span>
+    </section>
+    <div class="divider"></div>
+
+    <section class="transaction">
+        <h4 class="title">Recent transaction</h4>
+        <div *ngFor="let move of loggedInUser?.moves" class="transaction-item">
+            <div class="transaction-info">
+                <img src="../../assets/icon/send.svg" />
+                <div class="wrapper">
+                    <span class="contact-name">{{move?.to}}</span>
+                    <small>{{move?.at | date}}</small>
+                </div>
+
+            </div>
+
+            <span class="amount">- {{move?.amount | currency}}</span>
+        </div>
+    </section>
+
+</section>

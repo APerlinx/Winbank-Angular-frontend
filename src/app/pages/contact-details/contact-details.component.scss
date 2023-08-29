@@ -1,0 +1,126 @@
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    position: sticky;
+    top: 0;
+
+    .info,.header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h4 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    app-contact-image {
+        margin: 20px 0;
+    }
+
+    p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 5px;
+
+        &:last-child {
+            margin-bottom: 20px; // more space before the edit link
+        }
+    }
+
+    button {
+        font-size: 16px;
+        color: #7600FF; 
+        text-decoration: none;
+        border: 1px solid #7600FF;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: border 0.3s ease, color 0.3s ease;
+        margin-left: 1em;
+        &:hover {
+            border: 1px solid #FFA0A0;
+            color: #FFA0A0;
+        }
+    }
+
+    
+    .transaction {
+        
+        .transaction-info p,
+        .transaction-info span {
+            margin: 0;
+            padding: 0;
+        }
+        .transaction-info {
+            display: flex;
+            align-items: center;
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+
+                small {
+                    color: grey;
+                }
+            }
+        }        
+
+        .transaction-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: normal;
+            margin-bottom: 0.2em;
+        }
+
+        .amount {
+            // font-weight: 500;
+            line-height: normal;
+            margin-left: 1em;
+        }
+
+        .contact-name {
+            font-weight: 500;
+        }
+
+        img {
+            margin-right: 0.5em;
+        }
+    }
+
+    .divider {
+        border-bottom: 1px solid rgba(90, 86, 86, 0.5);
+        margin-inline-end: 1em;
+        margin-block: 1em;
+        z-index: 10;
+    }
+
+    .title {
+        margin-bottom: 1em;
+        font-size: 1.2em;
+    }
+
+    input {
+        padding: 12px ;
+        border-radius: 4px;
+        border: none;
+    }
+
+    .action {
+        margin-top: 1em;
+    }
+
+    .empty-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

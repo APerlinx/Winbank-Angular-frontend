@@ -1,0 +1,11 @@
+<section class="contact-index" >
+    <contact-list (remove)="onRemoveContact($event)" [contacts]="contacts$ | async"></contact-list>
+    <div>
+        <section class="empty-section" *ngIf="isContactsRouteActive()">
+            <p>Click on a contact to <br>display more details!</p>
+            <img src="../../assets/icon/info.svg" />
+        </section>
+        <router-outlet></router-outlet>
+
+    </div>
+</section>

@@ -1,0 +1,19 @@
+.main-app {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+
+    .input {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .input-icons {
+        cursor: pointer;
+       .add-icon:hover,.notf-icon:hover {
+        transform: scale(1.2);
+       }
+    }
+}

@@ -1,0 +1,16 @@
+<section class="side-bar">
+    <app-header></app-header>
+
+    <div>
+        <h1>Client</h1>
+        <p>Mr. {{loggedInUser?.name}}</p>
+    </div>
+
+    <nav>
+        <a routerLink="/dashboard" routerLinkActive="active"><img src="../../assets/icon/dashboard.svg"/>Dashboard</a>
+        <a routerLink="/contact" routerLinkActive="active"><img src="../../assets/icon/contact.svg"/>Contacts</a>
+        <a routerLink="/underconstruction"><img src="../../assets/icon/trans.svg"/>Transaction</a>
+        <a routerLink="/underconstruction"><img src="../../assets/icon/profile.svg"/>Profile</a>
+    </nav>
+
+</section>

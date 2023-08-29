@@ -1,0 +1,15 @@
+<section class="homepage">
+    <div class="content-wrapper">
+
+        <div class="logo-section">
+            <img src="../../assets/icon/logo.svg" />
+            <h1>inbank</h1>
+        </div>
+        <input type="text" #userName placeholder="Enter your name" required/>
+        <button (click)="signup(userName.value)">Start Demo</button>
+        <p class="info-text">
+            {{ 'Welcome to WinBank, the premier digital bank for investors in stocks and crypto.' | naturalType }}
+        </p>
+    </div>
+
+</section>
