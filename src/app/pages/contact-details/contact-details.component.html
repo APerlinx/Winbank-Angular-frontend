@@ -9,23 +9,25 @@
         <p>{{contact.phone}}</p>
     </div>
 
-    <div>
+    <div class="transfer">
         <h4 class="title">Transfer funds</h4>
         <form [formGroup]="transactionForm" (ngSubmit)="onSend()">
+            <div class="input-container"> <!-- New Flexbox Container -->
+
             <input type="text" placeholder="Max: {{loggedInUser?.balance | currency}}" formControlName="amount">
+            <button [disabled]="!transactionForm.valid">send</button>
+        </div>
+
             <div *ngIf="transactionForm.get('amount')?.invalid && transactionForm.get('amount')?.touched">
-                <small *ngIf="transactionForm.get('amount')?.errors?.['required']">Amount is required.</small>
+                <small *ngIf="transactionForm.get('amount')?.errors?.['required']">*Amount is required.</small>
                 <small *ngIf="transactionForm.get('amount')?.errors?.['insufficientBalance']">You do not have enough
                     balance.</small>
                 <small *ngIf="transactionForm.get('amount')?.errors?.['min']">Amount cannot be negative.</small>
                 <small *ngIf="transactionForm.get('amount')?.errors?.['notANumber']">Please enter a valid
                     number.</small>
-                <small *ngIf="transactionForm.get('amount')?.errors?.['specialChars']">Please do not use special
-                    characters.</small>
+                <small *ngIf="transactionForm.get('amount')?.errors?.['specialChars']">Please enter a valid number.</small>
             </div>
-            <button [disabled]="!transactionForm.valid">send</button>
         </form>
-
     </div>
 
     <section class="transaction">

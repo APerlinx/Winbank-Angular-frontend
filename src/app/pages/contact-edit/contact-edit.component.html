@@ -6,7 +6,7 @@
             <h4>
                 <input formControlName="name" placeholder="Name" required="" />
             </h4>
-            <app-contact-image [name]="contactForm.get('name')?.value"></app-contact-image>
+            <app-contact-image [name]="contactForm.get('name')?.value" [size]="150"></app-contact-image>
         </div>
 
         <div class="info">
@@ -18,7 +18,7 @@
             <button type="submit" [disabled]="!contactForm.valid || contactForm.value.name.length < 3">Save</button>
             <button type="button" (click)="navigateBack()">Back</button>
         </div>
-        <!-- Error Message -->
+
         <div *ngIf="!contactForm.valid || contactForm.value.name.length < 3">
             <small class="error-message">Please fill out the form correctly before saving.</small>
         </div>
