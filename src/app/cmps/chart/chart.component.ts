@@ -9,18 +9,18 @@ import { ChartType } from 'angular-google-charts'
   styleUrls: ['./chart.component.scss'],
 })
 export class ChartComponent implements OnInit {
-  companyQuotes: any[] = []
 
-  public bitcoinChartData: any[] = []
-  public columnNames = ['Date', 'Price']
   public lineChartType: ChartType = ChartType.LineChart
-  title = 'Bitcoin market price'
-  titleStock = 'My S&P 500 stock'
   public candlestickChartType: ChartType = ChartType.CandlestickChart
-  public sp500ChartData: any[] = []
-
   public columnChartType: ChartType = ChartType.ColumnChart
   public spendingChartData: any[] = []
+  public sp500ChartData: any[] = []
+  public bitcoinChartData: any[] = []
+  public companyQuotes: any[] = []
+  public columnNames = ['Date', 'Price']
+
+  title = 'Bitcoin market price'
+  titleStock = 'My S&P 500 stock'
 
   constructor(private financeService: FinanceService) {}
 
@@ -29,6 +29,7 @@ export class ChartComponent implements OnInit {
     this.fetchBitcoinData()
     this.initSpendingData()
   }
+  
   fetchBitcoinData(): void {
     this.financeService.getBitcoinPriceData().subscribe((data) => {
       this.bitcoinChartData = data.values.map((item: any) => [
@@ -54,11 +55,11 @@ export class ChartComponent implements OnInit {
 
   initSpendingData(): void {
     this.spendingChartData = [
-      ['January', 2000],
-      ['February', 2500],
-      ['March', 2100],
-      ['April', 1800],
-      ['May', 2300],
+      ['May', 2000],
+      ['June', 2500],
+      ['July', 2100],
+      ['August', 1800],
+      ['September', 2300],
     ]
   }
 }

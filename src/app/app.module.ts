@@ -26,6 +26,7 @@ import { AppLayoutComponent } from './cmps/app-layout/app-layout.component'
 import { NaturalTypePipe } from './pipes/natural-type.pipe'
 import { LoaderComponent } from './cmps/loader/loader.component';
 import { UnderConstructionComponent } from './cmps/under-construction/under-construction.component';
+import { EvStopDirective } from './directives/ev-stop.directive';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { UnderConstructionComponent } from './cmps/under-construction/under-cons
     NaturalTypePipe,
     LoaderComponent,
     UnderConstructionComponent,
+    EvStopDirective,
   ],
   imports: [
     BrowserModule,

@@ -26,6 +26,6 @@ export class ContactImageComponent implements OnInit, OnChanges {
 
   updateImageDetails(): void {
     this.initials = this.contactImageService.getInitials(this.name)
-    this.backgroundColor = this.contactImageService.getRandomColor()
+    this.backgroundColor = this.contactImageService.getColorForName(this.name);
   }
 }

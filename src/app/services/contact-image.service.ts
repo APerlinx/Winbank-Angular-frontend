@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ContactImageService {
+  private colorMap: Map<string, string> = new Map();
 
   constructor() { }
 
@@ -24,6 +25,14 @@ export class ContactImageService {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+  }
+
+  getColorForName(name: string): string {
+    if (!this.colorMap.has(name)) {
+      const color = this.getRandomColor();
+      this.colorMap.set(name, color);
+    }
+    return this.colorMap.get(name) as string;
   }
 
 }
