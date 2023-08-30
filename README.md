@@ -30,12 +30,20 @@ Before you get started, make sure you have the following prerequisites installed
 
 ## Installation & Setup
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/Aperlinx/WinBank.git
-2.**Install**
-  ```bash
-  npm install
+```bash
+# Clone the Repository
 
+git clone https://github.com/Aperlinx/WinBank.git 
 
+# Change directory
+
+cd WinBank
+
+# Install Dependencies
+
+npm install
+
+#Run
+
+npm start
 
