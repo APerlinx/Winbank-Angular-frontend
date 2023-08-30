@@ -31,14 +31,14 @@
     <section class="transaction">
         <h4 class="title">Recent transaction</h4>
         <div class="empty-box" *ngIf="!hasTransactionsWithContact()">
-            <img src="../../assets/icon/box.svg" />
+            <img src="assets/icon/box.svg" />
             <small>You have no transaction yet!</small>
         </div>
 
         <div *ngFor="let move of loggedInUser?.moves" class="transaction-item">
             <ng-container *ngIf="move.toId === contact._id">
                 <div class="transaction-info">
-                    <img src="../../assets/icon/send.svg" />
+                    <img src="assets/icon/send.svg" />
                     <div class="wrapper"> <span class="contact-name">{{move?.to}}</span>
                         <small>{{move?.at | date}}</small>
                     </div>

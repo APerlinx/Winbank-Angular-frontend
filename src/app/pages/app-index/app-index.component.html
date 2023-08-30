@@ -3,10 +3,10 @@
     <div class="credit-card">
         <div class="user-info">
             <span class="user-name">Mr. {{loggedInUser?.name}}</span>
-            <img src="../../assets/icon/visa.svg" class="visa-icon" />
+            <img src="assets/icon/visa.svg" class="visa-icon" />
         </div>
         <span class="card-num">4580 **** **** 6521</span>
-        <img src="../../assets/icon/logo-white.svg" class="bank-logo" />
+        <img src="assets/icon/logo-white.svg" class="bank-logo" />
     </div>
     <div class="divider"></div>
 
@@ -20,7 +20,7 @@
         <h4 class="title">Recent transaction</h4>
         <div *ngFor="let move of loggedInUser?.moves" class="transaction-item">
             <div class="transaction-info">
-                <img src="../../assets/icon/send.svg" />
+                <img src="assets/icon/send.svg" />
                 <div class="wrapper">
                     <span class="contact-name">{{move?.to}}</span>
                     <small>{{move?.at | date}}</small>
