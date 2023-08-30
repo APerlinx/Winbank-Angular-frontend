@@ -1,3 +1,5 @@
-<div [style.background-color]="backgroundColor">
-    {{ initials }}
+<div [style.background-color]="backgroundColor" [ngClass]="{'large-font': size > 50}" 
+    [style.width.px]="size" 
+    [style.height.px]="size">
+    <span class="initials">{{ initials }}</span>
 </div>

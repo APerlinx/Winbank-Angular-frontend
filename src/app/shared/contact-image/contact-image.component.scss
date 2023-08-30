@@ -1,10 +1,23 @@
 :host {
   display: inline-block;
   width: 50px;
-  height: 40px;
-  border-radius: 50% !important;
+  height: 50px;
+  border-radius: 4px;
   color: white;
   text-align: center;
   line-height: 50px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+  border: 2px solid rgb(187, 185, 185);
+
+}
+
+.large-font {
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

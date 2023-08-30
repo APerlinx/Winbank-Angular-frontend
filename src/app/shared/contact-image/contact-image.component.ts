@@ -1,39 +1,31 @@
-// contact-image.component.ts
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core'
+import { ContactImageService } from 'src/app/services/contact-image.service'
 
 @Component({
   selector: 'app-contact-image',
   templateUrl: './contact-image.component.html',
-  styleUrls: ['./contact-image.component.scss']
+  styleUrls: ['./contact-image.component.scss'],
 })
-export class ContactImageComponent implements OnInit {
+export class ContactImageComponent implements OnInit, OnChanges {
+  @Input() name!: string
+  @Input() size: number = 50
+  initials = ''
+  backgroundColor = ''
 
-  @Input() name!: string;
-  initials = '';
-  backgroundColor = '';
+  constructor(private contactImageService: ContactImageService) {}
 
   ngOnInit(): void {
-    this.initials = this.getInitials(this.name);
-    this.backgroundColor = this.getRandomColor();
+    this.updateImageDetails();
   }
 
-  getInitials(name: string): string {
-    let names = name.split(' ');
-    let initials = names[0].substring(0, 1).toUpperCase();
-
-    if (names.length > 1) {
-      initials += names[names.length - 1].substring(0, 1).toUpperCase();
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['name']) {
+      this.updateImageDetails();
     }
-    return initials;
   }
 
-  getRandomColor(): string {
-    let letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+  updateImageDetails(): void {
+    this.initials = this.contactImageService.getInitials(this.name)
+    this.backgroundColor = this.contactImageService.getRandomColor()
   }
-
 }

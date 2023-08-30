@@ -1,7 +1,7 @@
 <section *ngIf="contact$ | async as contact" class="contact-details">
     <div class="header">
         <h4>{{contact.name}}</h4>
-        <app-contact-image [name]="contact.name"></app-contact-image>
+        <app-contact-image [name]="contact.name" [size]="150"></app-contact-image>
     </div>
 
     <div class="info">

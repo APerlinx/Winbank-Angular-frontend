@@ -20,10 +20,14 @@
         font-size: 24px;
         margin-bottom: 10px;
         color: #333;
+        font-weight: 500;
+
     }
 
     app-contact-image {
         margin: 20px 0;
+        height: 150px;
+        width: 150px;
     }
 
     p {
@@ -45,6 +49,7 @@
         border-radius: 4px;
         transition: border 0.3s ease, color 0.3s ease;
         margin-left: 1em;
+        margin-bottom: 0;
         &:hover {
             border: 1px solid #FFA0A0;
             color: #FFA0A0;
@@ -108,7 +113,7 @@
     }
 
     input {
-        padding: 12px ;
+        padding: 8px 12px ;
         border-radius: 4px;
         border: none;
     }

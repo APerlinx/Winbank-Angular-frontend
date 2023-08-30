@@ -60,7 +60,7 @@ export class UserService {
   addMove(move: Move) {
     const user = this.getUser()
     if (!user) return
-    user.moves.push(move)
+    user.moves.unshift(move)
     user.balance -= move.amount
     this.saveUserToStorage(user)
     this.userSubject.next(user)
