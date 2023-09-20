@@ -9,13 +9,6 @@ WinBank is a single page app developed with the power and flexibility of [Angula
 
 - [Prerequisites](#prerequisites)
 - [Installation & Setup](#installation--setup)
-- [Development Server](#development-server)
-- [Code Scaffolding](#code-scaffolding)
-- [Building the Project](#building-the-project)
-- [Testing](#testing)
-  - [Unit Tests](#unit-tests)
-  - [End-to-End Tests](#end-to-end-tests)
-- [Further Assistance](#further-assistance)
 
 ---
 
@@ -30,20 +23,27 @@ Before you get started, make sure you have the following prerequisites installed
 
 ## Installation & Setup
 
+### Clone the Repository
+
 ```bash
-# Clone the Repository
-
 git clone https://github.com/Aperlinx/WinBank.git 
+```
 
-# Change directory
+### Change directory
 
+```bash
 cd WinBank
+```
 
-# Install Dependencies
+### Install Dependencies
 
+```bash
 npm install
+```
 
-#Run
+###Run
 
+```bash
 npm start
+```
 
