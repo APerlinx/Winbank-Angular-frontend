@@ -18,21 +18,27 @@ Before you get started, make sure you have the following prerequisites installed
 
 - [Node.js](https://nodejs.org/)
 - [Angular CLI](https://cli.angular.io/)
+```bash
+npm install -g @angular/cli
+```
 
 ---
+
+## Check it our here
+[WinBank](https://aperlinx.github.io/Winbank-Angular-frontend/ "Link to the web app")
 
 ## Installation & Setup
 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/Aperlinx/WinBank.git 
+git clone https://github.com/APerlinx/Winbank-Angular-frontend.git 
 ```
 
 ### Change directory
 
 ```bash
-cd WinBank
+cd Winbank-Angular-frontend
 ```
 
 ### Install Dependencies
